@@ -1,0 +1,106 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+    font-size:12px;
+	font-family:Arial, Helvetica, sans-serif;
+	margin: 0 auto;
+	text-shadow:0 0 .1px;
+	backgound: linear-gradient(rgba(214,214,214,0),rgba(214,214,214,1)) repeat-x;
+	}
+
+a:link{
+	color:#0094DE;
+	text-decoration:none;
+	}
+a:visited{
+	color:#0094DE;
+	}
+a:hover{
+	text-decoration:underline;
+	}
+
+input{
+	font-size:12px;
+	font-family:Arial, Helvetica, sans-serif;
+	}
+input[type=submit]{color:#FFF; background-color:#0094DE; padding:4x;}
+	
+textarea{
+	resize:none;
+}
+
+.header{
+	padding:5px;
+	background:linear-gradient(rgba(0,172,236,.8),rgba(0,172,236,.7),rgba(0,172,236,.8)) repeat-x;
+	color:#FFF;
+	font-family:"Lucida Console", Monaco, monospace;
+	}
+.header a:link{color:#FFF;}
+.header a:visited {color:#FFF;}
+
+
+.footer{
+	color:#FFF;
+	font-family:"Lucida Console", Monaco, monospace;
+	padding:5px;
+	background:linear-gradient(rgba(0,172,236,.8),rgba(0,172,236,1)) repeat-x;
+	border-top:solid 4px rgba(194,194,194,1);
+	position:relative;
+	clear:both;
+	}
+.footer a:link{color:#FFF;}
+.footer a:visited {color:#FFF;}
+
+
+.sidebar{
+	float:right;
+	width:20%;
+	height:400px;
+	background:linear-gradient(rgba(211,211,211,1),rgba(211,211,211,0));
+	padding:10px;
+	text-align:center;
+}
+
+/* ~~ Element/tag selectors ~~ */
+ul, ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
+	margin-top:2em;
+	margin-bottom:2em;
+	margin-left:0;
+	margin-right:0;
+	padding-left:0;
+}
+
+ul.nav {
+	list-style:none; /* this removes the list marker */
+	border-top: 0px solid #666; /* this creates the top border for the links - all others are placed using a bottom border on the LI */
+	margin-bottom:15px; /*15px this creates the space between the navigation on the content below */
+}
+ul.nav li {
+	margin:8px;
+	border-bottom: 0px solid #666; /* this creates the button separation */
+}
+ul.nav a, li.nav a:visited { /* grouping these selectors makes sure that your links retain their button look even after being visited */
+	padding: 5px 5px 5px 15px;
+	display: block; /* this gives the link block properties causing it to fill the whole LI containing it. This causes the entire area to react to a mouse click. */
+	width: ;  /*this width makes the entire button clickable for IE6. If you don't need to support IE6, it can be removed. Calculate the proper width by subtracting the padding on this link from the width of your sidebar container. */
+	text-decoration: none;
+	background: #CCC;
+	color:#0094DE;
+}
+ul.nav a:hover, li.nav a:active, li.nav a:focus { /* this changes the background and text color for both mouse and keyboard navigators */
+	background: #C2C2C2;
+	color: #0094DE;
+}
+
+.content {
+
+	padding: 10px;
+	width: ;
+	float: ;
+}
+
+/* ~~ This grouped selector gives the lists in the .content area space ~~ */
+.content ul, .content ol { 
+	padding: 0 15px 15px 40px; /* this padding mirrors the right padding in the headings and paragraph rule above. Padding was placed on the bottom for space between other elements on the lists and on the left to create the indention. These may be adjusted as you wish. */
+}
